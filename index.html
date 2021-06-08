@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Maze Generator</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+ <script type="text/javascript" src="sketch.js"></script>
+             <script type="text/javascript" src="cell.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+      
+    <style> body {padding: 20px; margin: 0;} canvas {vertical-align: top;} </style>
+  </head>
+  <body>
+    
+    <button id="runBtn" style="background-color: mediumpurple;"><a href="#" style="color: white" onclick="solveAStar(true,0);">Solve A* Manhattan</a></button> 
+   <button id="runBtn"  style="background-color: lightyellow;"><a href="#" style="color: black" onclick="solveAStar(false,0);">Solve A* Euclidean</a></button>
+     <button id="runBtn" style="background-color: red;"><a href="#" style="color: white" onclick="solveUCS(false,1);">Solve Uniform Cost Search</a></button>
+       <button id="runBtn" style="background-color: skyblue;"><a href="#" style="color: white" onclick="solveIDS(false,2)">Solve Iterative Deepening Search</a></button>
+      <div style="overflow: hidden;">
+            <p style="float: left; margin-right: 300px" id="pathLength"></p>
+            <p style="float: left; margin-right: 300px" id="expandNodes"></p>
+            <p style="float: left;" id="time"></p>
+
+</div>
+
+  </body>
+</html>
